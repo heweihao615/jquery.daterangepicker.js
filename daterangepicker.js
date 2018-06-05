@@ -1,7 +1,8 @@
 // daterangepicker.js
 // version : 0.0.7
-// author : Chunlong Liu||He WeiHao
-// last updated at: 2018-6-4
+// author : Chunlong Liu
+// last updated at: 2015-06-26
+// license : MIT
 // www.jszen.com
 
 (function (factory) {
@@ -626,12 +627,17 @@
                 
                 tmd.val(opt.month1.getFullYear());
                 
-                if ($(".bigboom").length == 2) {//bug修复
+                if ($(".bigboom").length == 2) {//待解决Bug，出现两个选择年月时样式修复,此方法解决并不完美mark2
                     $(".month-wrapper").css("height", "198px");
                     $(".gap-lines").css("height", "210px");
                 } else {
                     $(".month-wrapper").css("height", "auto");
+                    if ($(".newbox ul li").length > 2) {
+                        var sum = $(".fuck").val(opt.month1.getFullYear());//bug修复
+                        $(".month-wrapper").css('height', '187px');
+                    }
                 };
+                
             });
             function gotoNextYear(self) {//年月日至年月日下一年点击事件
                 var isMonth2 = $(self).parents('table').hasClass('month2');
@@ -678,6 +684,10 @@
                     $(".gap-lines").css("height", "210px");
                 } else {
                     $(".month-wrapper").css("height", "auto");
+                    if ($(".newbox ul li").length > 2) {
+                        var sum = $(".fuck").val(opt.month1.getFullYear());//bug修复
+                        $(".month-wrapper").css('height', '187px');
+                    }
                 };
                 //修改二
             });
@@ -707,11 +717,15 @@
             //结束
 			box.find('.next').click(function()
             {
-                if ($(".bigboom").length == 2) {//bug修复
+                if ($(".bigboom").length == 2) {//待解决Bug，出现两个选择年月时样式修复,此方法解决并不完美mark2
                     $(".month-wrapper").css("height", "198px");
                     $(".gap-lines").css("height", "210px");
                 } else {
                     $(".month-wrapper").css("height", "auto");
+                    if ($(".newbox ul li").length > 2) {
+                        var sum = $(".fuck").val(opt.month1.getFullYear());//bug修复
+                        $(".month-wrapper").css('height', '187px');
+                    }
                 };
                 var isMonth2 = $(this).parents('table').hasClass('month2');//判断是否是第二个月
                 var year = isMonth2 ? opt.month2 : opt.month1;//判断对月份做出更改
@@ -756,11 +770,16 @@
                 $(this).parents('table').find('.yearinput').val(year.getFullYear());
                 $('.footer').find('.yearinput').val(year.getFullYear());
                 $(this).parents('table').find(`ul li:nth-child(${index})`).addClass('nowmonth').siblings().removeClass('nowmonth');
-                if ($(".bigboom").length == 2) {//bug修复
+                if ($(".bigboom").length == 2) {//待解决Bug，出现两个选择年月时样式修复,此方法解决并不完美mark2
+                    console.log($('.newboxs').css('height'));
                     $(".month-wrapper").css("height", "198px");
                     $(".gap-lines").css("height", "210px");
                 } else {
                     $(".month-wrapper").css("height", "auto");
+                    if ($(".newbox ul li").length > 2) {
+                        var sum = $(".fuck").val(opt.month1.getFullYear());//bug修复
+                        $(".month-wrapper").css('height', '187px');
+                    }
                 };
 				if(!opt.stickyMonths) gotoPrevMonth(this);
 				else gotoPrevMonth_stickily(this);
@@ -1250,26 +1269,29 @@
 
 
                 else {//单年月控件
+                    $(".month-wrapper").css("height", "187px");
                     if ($('.newbox').find("ul li").length > 2) {
-                        $('.newbox').remove();
-                        $(this).parents('table').find('.week-name').show();
+                        //$(this).parents('table').parent().prev().$('.newbox').remove();
+                        $(this).parents().find('.tap-last>div').remove();
+                        //$(this).parents('table').find('tbody').show();
                         $(this).parents('table').find('tbody').show();
+                        $(this).parents('table').find('.footer').parent().next().show();
                         return //完成升级功能 2018-6-1 17:17 儿童节快乐
                     }
-                $(".week-name").hide();
-                $(".month1 tbody").hide();
+                    $(this).parents('table').find(".week-name").hide();
+                    $(this).parents('table').find(".month1 tbody").hide();
                 var nowyear = new Date().getFullYear();
                     var nowmonth = new Date().getMonth() + 1;
                     var isMonth2 = $(this).parents('table').hasClass('month2');//判断是否是第二个月
                     var year = opt.month1.getFullYear();//判断对月份做出更改 
                     var month = opt.month1.getMonth()+1;
                    
-                $(".month-wrapper").next().html(`<div class="newbox">
-                    <a class="preyear"><<</a>
-                    <div class="newinputbox" style="display:block;"><input placeholder="输入年份" class="yearinput fuck" value="${year}"/></div>
-                    <a class="nextyear">>></a>
-                    <div class="monthbox">
-                        <ul>
+                    $(".month-wrapper").prev().html(`<div class="newbox" style="position:absolute;z-index:10100;top:96px;border-bottom:0;">
+                    <a class="preyear" style="font-weight:600;"><<</a>
+                    <div class="newinputbox" style="display:block;text-align:center;"><input placeholder="输入年份" class="yearinput fuck" value="${year}"/></div>
+                    <a class="nextyear" style="font-weight:600;">>></a>
+                    <div class="monthbox" style="margin:3px 8px;">
+                        <ul style="padding-left:4px;">
                             <li>1月</li>
                             <li>2月</li>
                             <li>3月</li>
@@ -1294,7 +1316,7 @@
                         var reg = /^\d{4}$/;;
                         if (reg.test($(this).val()) == false) {
                             alert("请输入合理的年月");
-                            $(this).val(nowyear);
+                            $(this).val(year);
                             return
                         }
                     });
@@ -2479,7 +2501,7 @@
 						<input type="button" class="apply-btn disabled'+ getApplyBtnClass() +'" value="'+lang('apply')+'" />';
 				html += '</div>'
 			}
-
+            html+=`<div class="tap-last"></div>`
 			html += '<div class="month-wrapper">'
                 + '<table class="month1" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:27px;"><span class="prevyears prevye">&lt;&lt;</span><span class="prev">&lt;</span></th><th colspan="5" class="month-name">January, 2011</th><th style="width:27px;">' + (opt.singleDate || !opt.stickyMonths ? '<span class="next">&gt;</span><span class="nextyears nextye">&gt;&gt;</span>': '') + '</th><tr></tr></tr><tr class="week-name">'+getWeekHead()+'</thead><tbody></tbody></table>';
 
