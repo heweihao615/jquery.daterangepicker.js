@@ -23,7 +23,7 @@
                 language: 'cn',
                 startOfWeek: 'monday',
             });
-  获取选择到的值：$("#dateTimeRange").val();`
+  `
   
 
 双年月：
@@ -129,5 +129,5 @@ $("#dateTimeRange").dateRangePicker({
             });
 
         }
-        
+        获取选择到的值：$("#dateTimeRange").val(); 真的受不了这个排版l
 
