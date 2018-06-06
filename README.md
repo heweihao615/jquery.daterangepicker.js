@@ -5,7 +5,7 @@
 ### 4.第一步，引入依赖：
 
    <script src="jquery.daterangepicker.js"></script>  
-   <code><link rel="stylesheet" href="daterangepicker.css">" </code>
+   <pre><link rel="stylesheet" href="daterangepicker.css"></pre>
 
    5.第二步，html部分  
    
