@@ -1,7 +1,7 @@
 // daterangepicker.js
 // version : 0.0.7
-// author : Chunlong Liu
-// last updated at: 2015-06-26
+// author : Chunlong Liu||He Weihao
+// last updated at: 2018-6-6
 // license : MIT
 // www.jszen.com
 
@@ -1286,12 +1286,12 @@
                     var year = opt.month1.getFullYear();//判断对月份做出更改 
                     var month = opt.month1.getMonth()+1;
                    
-                    $(".month-wrapper").prev().html(`<div class="newbox" style="position:absolute;z-index:10100;top:96px;border-bottom:0;">
+                    $(".month-wrapper").prev().html(`<div class="newbox" style="position:absolute;z-index:10100;top:90px;height:138px;border-bottom:0;">
                     <a class="preyear" style="font-weight:600;"><<</a>
                     <div class="newinputbox" style="display:block;text-align:center;"><input placeholder="输入年份" class="yearinput fuck" value="${year}"/></div>
                     <a class="nextyear" style="font-weight:600;">>></a>
                     <div class="monthbox" style="margin:3px 8px;">
-                        <ul style="padding-left:4px;">
+                        <ul style="padding-left:3px;">
                             <li>1月</li>
                             <li>2月</li>
                             <li>3月</li>
