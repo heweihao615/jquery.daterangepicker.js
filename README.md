@@ -4,18 +4,30 @@
 ### 3.那就在4里开始填写使用步骤吧 - - ；
 ### 4.第一步，引入依赖：
    <script src="jquery.daterangepicker.js"></script>  
+   
    <link rel="stylesheet" href="daterangepicker.css"/> 
-### 5.第二步，html部分  
-### <input id="dateTimeRange" value="" type="text" style="text-align:center;"> 
-### 6.第三部，js部分
+   
+   5.第二步，html部分  
+   
+   <input id="dateTimeRange" value="" type="text" style="text-align:center;"> 
+   
+
+6.第三部，js部分
+
 Tab 双年月：
+
 Tab  $("#dateTimeRange").dateRangePicker({ 
+
                 autoClose: true, 
+                
                 separator: ' 至 ', 
+                
                 language: 'auto', 
+                
                 // startOfWeek: 'monday', 
-                shortcuts: null,\<br> 
-                customShortcuts: [\<br> 
+                
+                shortcuts: null,
+                customShortcuts: [
                     {
                         name: '上周, ',
                         dates: function () {
