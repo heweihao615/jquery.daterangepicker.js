@@ -6,7 +6,7 @@
 
    <script src="jquery.daterangepicker.js"></script>  
    <link rel="stylesheet" href="daterangepicker.css"> 
-   
+   ___________________________________________________________
    5.第二步，html部分  
    
    <input id="dateTimeRange" value="" type="text" style="text-align:center;"> 
@@ -14,9 +14,9 @@
 
 6.第三部，js部分
 
-Tab 双年月：
+双年月：
 
-Tab  $("#dateTimeRange").dateRangePicker({ 
+$("#dateTimeRange").dateRangePicker({ 
 
                 autoClose: true, 
                 
