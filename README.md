@@ -3,17 +3,17 @@
 ### 2.我也不知道为什么要1,2排序，但是有1就有2...排版好看。。。？
 ### 3.那就在4里开始填写使用步骤吧 - - ；
 ### 4.第一步，引入依赖：
-###  <script src="jquery.daterangepicker.js"></script>\<br> 
-###  <link rel="stylesheet" href="daterangepicker.css" /> \<br> 
-### 5.第二步，html部分\<br> 
+   <script src="jquery.daterangepicker.js"></script> \<br> 
+   <link rel="stylesheet" href="daterangepicker.css" /> \<br> 
+### 5.第二步，html部分 \<br> 
 ### <input id="dateTimeRange" value="" type="text" style="text-align:center;">\<br> 
 ### 6.第三部，js部分
-  #### 双年月：\<br> 
-  $("#dateTimeRange").dateRangePicker({\<br> 
-                autoClose: true,\<br> 
-                separator: ' 至 ',\<br> 
-                language: 'auto',\<br> 
-                // startOfWeek: 'monday',\<br> 
+Tab 双年月：\<br> 
+Tab  $("#dateTimeRange").dateRangePicker({ 
+                autoClose: true, 
+                separator: ' 至 ', 
+                language: 'auto', 
+                // startOfWeek: 'monday', 
                 shortcuts: null,\<br> 
                 customShortcuts: [\<br> 
                     {
