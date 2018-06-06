@@ -5,11 +5,11 @@
 ### 4.第一步，引入依赖：
 
    <script src="jquery.daterangepicker.js"></script>  
-   `<link rel="stylesheet" href="daterangepicker.css"></pre>`
+   `<link rel="stylesheet" href="daterangepicker.css">`
 
    5.第二步，html部分  
    
-   <input id="dateTimeRange" value="" type="text" style="text-align:center;"> 
+   `<input id="dateTimeRange" value="" type="text" style="text-align:center;"> `
    
 
 6.第三部，js部分
