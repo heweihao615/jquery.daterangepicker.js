@@ -13,6 +13,15 @@
    
 
 6.第三部，js部分
+ 单年月使用：
+ ` $("#dateTimeRange").dateRangePicker({
+                autoClose: true,
+                singleDate: true,
+                showShortcuts: false,
+                language: 'cn',
+                startOfWeek: 'monday',
+            });
+  获取选择到的值：$("#dateTimeRange").val();`
 
 双年月：
 
@@ -118,12 +127,4 @@ $("#dateTimeRange").dateRangePicker({
 
         }
         
- ` 单年月使用：`
- ` $("#dateTimeRange").dateRangePicker({
-                autoClose: true,
-                singleDate: true,
-                showShortcuts: false,
-                language: 'cn',
-                startOfWeek: 'monday',
-            });
-  获取选择到的值：$("#dateTimeRange").val();`
+
