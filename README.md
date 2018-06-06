@@ -129,5 +129,5 @@ $("#dateTimeRange").dateRangePicker({
             });
 
         }
-        获取选择到的值：$("#dateTimeRange").val(); 真的受不了这个排版 - -！
+        获取选择到的值：$("#dateTimeRange").val(); 不得不再次吐槽这个排版 - -！
 
