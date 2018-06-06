@@ -7,12 +7,12 @@
    <script src="jquery.daterangepicker.js"></script>  
    `<link rel="stylesheet" href="daterangepicker.css">`
 
-   5.第二步，html部分  
+ ###  5.第二步，html部分  
    
    `<input id="dateTimeRange" value="" type="text" style="text-align:center;"> `
    
 
-6.第三部，js部分
+### 6.第三部，js部分
 
  单年月使用：
  
