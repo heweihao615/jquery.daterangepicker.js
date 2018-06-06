@@ -3,9 +3,9 @@
 ### 2.我也不知道为什么要1,2排序，但是有1就有2...排版好看。。。？
 ### 3.那就在4里开始填写使用步骤吧 - - ；
 ### 4.第一步，引入依赖：
+
    <script src="jquery.daterangepicker.js"></script>  
-   
-   <link rel="stylesheet" href="daterangepicker.css"/> 
+   <link rel="stylesheet" href="daterangepicker.css"> 
    
    5.第二步，html部分  
    
