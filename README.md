@@ -1,18 +1,16 @@
 # jquery.daterangepicker.js
-### 1.代码未压缩，在源码基础上都有注释，写得很仓促（因为慢了要罚钱 - - ），有代码洁癖的最好别看..
-### 2.我也不知道为什么要1,2排序，但是有1就有2...排版好看。。。？
-### 3.那就在4里开始填写使用步骤吧 - - ；
-### 4.第一步，引入依赖：
+
+### 第一步，引入依赖：
 
    <script src="jquery.daterangepicker.js"></script>  
    `<link rel="stylesheet" href="daterangepicker.css">`
 
- ###  5.第二步，html部分  
+### 第二步，html部分  
    
    `<input id="dateTimeRange" value="" type="text" style="text-align:center;"> `
    
 
-### 6.第三部，js部分
+### 第三部，js部分
 
  单年月使用：
  
@@ -129,8 +127,5 @@ $("#dateTimeRange").dateRangePicker({
             });
 
         }
-        获取选择到的值：$("#dateTimeRange").val(); 不得不再次吐槽这个排版 - -！
-        回过头来看更改的源码有点不忍直视，很多判断都没必要，当时脑子一热就开始写了，没管那么多，其实源码还有很多地方可以优化和自定义
-        ，因为没细致查找该组件的作者是谁，看到源码里的有写一个作者，我也没时间看，直接在后面厚颜无耻的加上了自己的名字，
-        哈哈哈 - - ，暂时到这，如果我的更改帮到了你，请点个star，不说了，改bug去了。有问题issue，看到会回复的~
+        获取选择到的值：$("#dateTimeRange").val(); 
 
