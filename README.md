@@ -1,4 +1,4 @@
-# 基于jq自更新年月组件jquery.daterangepicker.js
+# 基于Jq日期组件jquery.daterangepicker.js
 
 ### 第一步，引入依赖：
 
